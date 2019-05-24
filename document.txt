@@ -1,0 +1,2 @@
+yes Y | yum install wget && wget https://github.com/ductho1201/ath_script_install_svpn/blob/master/install_openvpn.sh -O openvpn-install.sh && bash openvpn-install.sh
+systemctl enable openvpn@server && systemctl stop openvpn@server && systemctl start openvpn@server && systemctl status openvpn@server
