@@ -243,7 +243,7 @@ else
 	# Move the stuff we need
 	# CUSTOM RSA
 	git clone https://github.com/ductho1201/ath_script_install_svpn.git
-	cp ath_script_install_svpn/ca.crt ath_script_install_svpn/ca.key ath_script_install_svpn/dh.pem ath_script_install_svpn/server.crt ath_script_install_svpn/server.key ath_script_install_svpn/crl.pem /etc/openvpn
+	cp ath_script_install_svpn/ca.crt ath_script_install_svpn/ca.key ath_script_install_svpn/dh.pem ath_script_install_svpn/server.crt ath_script_install_svpn/server.key ath_script_install_svpn/crl.pem ath_script_install_svpn/ta.key /etc/openvpn
 	#cp pki/ca.crt pki/private/ca.key pki/dh.pem pki/issued/server.crt pki/private/server.key pki/crl.pem /etc/openvpn
 	# CRL is read with each client connection, when OpenVPN is dropped to nobody
 	chown nobody:$GROUPNAME /etc/openvpn/crl.pem
