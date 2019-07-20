@@ -176,6 +176,7 @@ else
 	IP=$(ip addr | grep 'inet' | grep -v inet6 | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | grep -oE '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | head -1)
 	#read -p "IP address: " -e -i $IP IP
 	# If $IP is a private IP address, the server must be behind NAT
+	echo "IP: $IP"
 	if echo "$IP" | grep -qE '^(10\.|172\.1[6789]\.|172\.2[0-9]\.|172\.3[01]\.|192\.168)'; then
 		echo
 		echo "This server is behind NAT. What is the public IPv4 address or hostname?"
@@ -186,6 +187,7 @@ else
 	echo "   1) UDP (recommended)"
 	echo "   2) TCP"
 	PROTOCOL=1
+	echo "PROTOCOL: $PROTOCOL"
 	#read -p "Protocol [1-2]: " -e -i 1 PROTOCOL
 	case $PROTOCOL in
 		1) 
@@ -207,11 +209,13 @@ else
 	echo "   4) OpenDNS"
 	echo "   5) Verisign"
 	DNS=3
+	echo "DNS: $DNS"
 	#read -p "DNS [1-5]: " -e -i 1 DNS
 	echo
 	echo "Finally, tell me your name for the client certificate."
 	echo "Please, use one word only, no special characters."
 	CLIENT=athsoftware
+	echo "CLIENT: $CLIENT"
 	#read -p "Client name: " -e -i client CLIENT
 	echo
 	echo "Okay, that was all I needed. We are ready to set up your OpenVPN server now."
