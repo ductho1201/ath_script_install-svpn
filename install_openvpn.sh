@@ -384,7 +384,7 @@ exit 0' > $RCLOCAL
 	fi
 	# client-common.txt is created so we have a template to add further users later
 	echo "client
-dev tun
+dev tap
 proto $PROTOCOL
 sndbuf 0
 rcvbuf 0
