@@ -208,7 +208,7 @@ else
 	echo "   3) Google"
 	echo "   4) OpenDNS"
 	echo "   5) Verisign"
-	DNS=3
+	DNS=1
 	echo "DNS: $DNS"
 	#read -p "DNS [1-5]: " -e -i 1 DNS
 	echo
